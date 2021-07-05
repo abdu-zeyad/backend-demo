@@ -8,7 +8,7 @@ app.use(cors());
 const PORT = process.env.PORT;
 app.use(express.json());
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/cars", {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
